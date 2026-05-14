@@ -1,0 +1,89 @@
+{
+  "seed": 42,
+  "n_examples": 50,
+  "baseline_llama": {
+    "mean": 0.585969451749915,
+    "std": 0.06980759585211398,
+    "median": 0.5850099176168442,
+    "min": 0.39090192317962646,
+    "max": 0.730517378076911,
+    "examples": [
+      {
+        "context": "Terry's daughter was in extreme pain in her mouth. After an evaluation, Terry realized that her daughter was teething. Once Terry realized she was teething, Terry administered medication. After the medication, Terry placed teething gel on the baby's teeth.",
+        "generated": " The medication and gel seemed to ease the pain. After a few days, the baby was fine.\nAfter a few days, the baby's mouth was fine. Terry realized that teething was not the only reason for the baby's pain. The baby had an infection in her mouth. Terry contacted a doctor and went to the doctor's office. The doctor gave the baby a shot of antibiotics and an",
+        "selfcheck_score": 0.5498111753591469,
+        "sentence_scores": [
+          0.5199366211891174,
+          0.5208355039358139,
+          0.5195885747671127,
+          0.5583836659789085,
+          0.5264933258295059,
+          0.5238711908459663,
+          0.6795693449676037
+        ]
+      },
+      {
+        "context": "Bill was not the most confident driver. It was time for him to take his road test for his license. He had a little trouble backing out of the parking space. After that, it went great.",
+        "generated": " He pulled out onto the street, drove a few blocks, and was feeling pretty good about himself. That is, until he got to a stop sign. There was a huge truck right behind him, so he started to pull out, when the truck started honking at him. \u201cGo! Go! Go!\u201d Bill tried to go, but his car just wouldn\u2019t budge. The truck was",
+        "selfcheck_score": 0.6393614304917199,
+        "sentence_scores": [
+          0.5398549512028694,
+          0.632503978908062,
+          0.6733913123607635,
+          0.7282790318131447,
+          0.6734254732728004,
+          0.613157331943512,
+          0.6149179339408875
+        ]
+      },
+      {
+        "context": "Dan realizes that he has gained weight over the last few Year's. He decides to begin exercising and eating better to become less fat. It is a grueling process, and at times Dan wants to give up. However, he remains dedicated until the extra weight is gone.",
+        "generated": " What has Dan done?\nA. Dan has started a new diet.\nB. Dan has started a new job.\nC. Dan has started a new relationship.\nD. Dan has started exercising.\nAnswer: D\nExplanation:  Actions can be positive or negative. A positive action is helpful and caring. Examples are being considerate of others and doing good things for them.\nA negative action is harmful",
+        "selfcheck_score": 0.712533235157025,
+        "sentence_scores": [
+          0.7068498767912388,
+          0.6130291223526001,
+          0.5900359153747559,
+          0.5872094705700874,
+          0.8066493831574917,
+          0.710131898522377,
+          0.7513484619557858,
+          0.9350117525318637
+        ]
+      },
+      {
+        "context": "Lacey had a bunch of chickens. One day, she realized one had laid an egg! She was so excited until she realized the egg was cold. She asked her son about it.",
+        "generated": " \u201cHow do chickens keep eggs warm?\u201d She asked.\nHe said, \u201cThey keep them in a nest.\u201d Lacey was confused, \u201cWhy does it need a nest?\u201d\nHer son said, \u201cBecause it\u2019s an egg.\u201d\nThat was the end of that conversation. Now, Lacey has a bunch of eggs in her fridge and she is trying to figure out how to warm them.\nDo",
+        "selfcheck_score": 0.6311016852657,
+        "sentence_scores": [
+          0.6204005926847458,
+          0.5693233162164688,
+          0.5877392962574959,
+          0.667596198618412,
+          0.6813191846013069,
+          0.6602315232157707
+        ]
+      },
+      {
+        "context": "Nina was trying to quit drinking. She decided to join a support group. She went to their meetings every week. In a few weeks, she was handling her cravings much better.",
+        "generated": " She was also making new friends who also wanted to quit drinking. Which is the best description of the support group?\nA. a health care provider\nB. a therapist\nC. a support group\nD. a counselor\nAnswer: C\nExplanation: Health care providers and therapists can help people with mental illnesses. They can teach people about mental illnesses. They can also teach people how to manage",
+        "selfcheck_score": 0.6358647249639034,
+        "sentence_scores": [
+          0.5096152722835541,
+          0.6396970078349113,
+          0.7837504558265209,
+          0.612807609140873,
+          0.6334532797336578
+        ]
+      }
+    ]
+  },
+  "register_lora": {
+    "mean": 0.46173594763281,
+    "std": 0.06768062269314294,
+    "median": 0.46768273282796147,
+    "min": 0.2666856778992547,
+    "max": 0.5949053152331284
+  },
+  "delta_mean": -0.12423350411710499
+}

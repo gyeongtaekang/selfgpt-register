@@ -274,6 +274,9 @@ class SelfCheckBERTScore:
             sentences_sample = [sent.text.strip() for sent in sentences_sample if len(sent) > 3]
             num_sentences_sample  = len(sentences_sample)
 
+            if num_sentences_sample == 0:
+                continue
+
             refs  = expand_list1(sentences, num_sentences_sample) # r1,r1,r1,....
             cands = expand_list2(sentences_sample, num_sentences) # s1,s2,s3,...
 
