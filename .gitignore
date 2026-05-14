@@ -3,3 +3,19 @@ selfcheckgpt.egg-info
 examples/
 dist/
 *.ipynb_checkpoints/
+
+# Large model checkpoints
+checkpoints/
+
+# External cloned repos
+Attention-Viewer/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Eval intermediate logs
+results/attn_rerun*.txt
+results/eval_log.txt
+results/train_log.txt
+results/auto_eval.sh

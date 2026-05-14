@@ -1,0 +1,361 @@
+{
+  "val_accuracy": 0.8393375944218477,
+  "val_n": 3442,
+  "test_accuracy": 0.8268305718866916,
+  "test_n": 1871,
+  "selfcheck": {
+    "mean": 0.46173594763281,
+    "std": 0.06768062269314294,
+    "median": 0.46768273282796147,
+    "min": 0.2666856778992547,
+    "max": 0.5949053152331284,
+    "examples": [
+      {
+        "context": "Mary's family was getting together for a holiday dinner at the club. Everyone was going to be there except for Mary's Grandfather. Mary was sad that the whole family would not be together. When she got to the club, she was surprised to see her grandfather!",
+        "generated": " Mary was relieved that they would be together after all. Everyone had a good time and Mary was glad that her grandfather came. Mary was thankful that he could make it after all. Mary was glad that her grandfather was healthy and able to come. Mary was happy that the whole family was together for the holiday. Mary was happy that her grandfather was healthy and able to come. Mary was happy that the",
+        "selfcheck_score": 0.3655549670968737,
+        "sentence_scores": [
+          0.36059822142124176,
+          0.4124603271484375,
+          0.3900008946657181,
+          0.3640049993991852,
+          0.24551457166671753,
+          0.3521506041288376,
+          0.4341551512479782
+        ]
+      },
+      {
+        "context": "Jane closed her eyes and counted to twenty. Kate ran to hide in the cupboard. Jane already knew Kate's favorite hiding places. She took her time before approaching the cupboard.",
+        "generated": " She smiled as she pulled Kate out, giggling and laughing. Jane and Kate loved their mother's game of hide and seek. Jane had just turned four and Kate was only two. They had a wonderful childhood. Jane grew up to be a wonderful mother herself. Her own children played hide and seek with her and loved it. Jane knew she had made the right decision having children. She was thankful",
+        "selfcheck_score": 0.5504003055393696,
+        "sentence_scores": [
+          0.5576702877879143,
+          0.4751157611608505,
+          0.642035111784935,
+          0.4364759624004364,
+          0.5608381554484367,
+          0.5586955174803734,
+          0.6180857941508293,
+          0.554285854101181
+        ]
+      },
+      {
+        "context": "The church choir went around town singing Christmas carols. While singing in the park, they encountered a homeless man. The homeless man seemed very annoyed with their singing. Once he heard O Holy Night, he sang along with the choir.",
+        "generated": " The man's beautiful voice made the choir members cry. They all agreed it was the best Christmas carol performance ever. The choir left the homeless man a donation on their way out. The man thanked them and wished them a Merry Christmas. The choir felt blessed that they could help someone in need. They made plans to go to the shelter to sing for the homeless. The choir felt good about their",
+        "selfcheck_score": 0.5096065455249378,
+        "sentence_scores": [
+          0.5303153246641159,
+          0.531657874584198,
+          0.46894143521785736,
+          0.582938939332962,
+          0.38045573234558105,
+          0.4602480009198189,
+          0.6126885116100311
+        ]
+      },
+      {
+        "context": "My boyfriend's name is Reggie. Reggie and I have been together for one year. In that one year, we have been through so much together. We have grown to love one another through good times and bad.",
+        "generated": " I know that I want to marry him one day. Reggie is my soulmate. I love him so much! Reggie is my world and I will love him forever. He will always be my one and only. Reggie and I are in love. I love Reggie so much! Reggie is my soulmate. I love him so much! Reggie is my world. Reggie and I are in love.",
+        "selfcheck_score": 0.39280166747895157,
+        "sentence_scores": [
+          0.42013058066368103,
+          0.2712761461734772,
+          0.4607462212443352,
+          0.4501849189400673,
+          0.5425986722111702,
+          0.33071331679821014,
+          0.4297310933470726,
+          0.2712761461734772,
+          0.4607462212443352,
+          0.35270170867443085,
+          0.33071331679821014
+        ]
+      },
+      {
+        "context": "Neil loved visiting London! He thought it was charming and friendly. But he wanted a better view. So he bought a ticket on the huge London Eye ferris wheel.",
+        "generated": " The view from the London Eye was amazing! Neil was happy he'd had the chance to see London from above. He took many pictures and sent them home to his friends. He couldn't wait to return and see the sights again! He had loved London and he wanted to see more of it. The London Eye had made him want to see the whole city! Neil knew he'd always have a",
+        "selfcheck_score": 0.5053152292966843,
+        "sentence_scores": [
+          0.36567528545856476,
+          0.45292581617832184,
+          0.6357783302664757,
+          0.3760859817266464,
+          0.5274257585406303,
+          0.47460633516311646,
+          0.7047090977430344
+        ]
+      }
+    ]
+  },
+  "attention": {
+    "mean_bos_attn": 0.02070576837286353,
+    "mean_reg_attn": 0.0706535274075577,
+    "mean_content_attn": 0.016056174370169173,
+    "per_register_attn": [
+      0.02070576837286353,
+      0.02070576837286353,
+      0.02070576837286353,
+      0.22049680451164022
+    ],
+    "per_layer_stats": [
+      {
+        "layer": 0,
+        "bos_attn": 0.02083333395421505,
+        "reg_attn": 0.06136763095855713,
+        "content_attn": 0.01706310547888279
+      },
+      {
+        "layer": 1,
+        "bos_attn": 0.02083333395421505,
+        "reg_attn": 0.10370320826768875,
+        "content_attn": 0.013124426826834679
+      },
+      {
+        "layer": 2,
+        "bos_attn": 0.02083333395421505,
+        "reg_attn": 0.054798681288957596,
+        "content_attn": 0.017673444002866745
+      },
+      {
+        "layer": 3,
+        "bos_attn": 0.02083333395421505,
+        "reg_attn": 0.05325806140899658,
+        "content_attn": 0.017816871404647827
+      },
+      {
+        "layer": 4,
+        "bos_attn": 0.02083333395421505,
+        "reg_attn": 0.052793264389038086,
+        "content_attn": 0.017860019579529762
+      },
+      {
+        "layer": 5,
+        "bos_attn": 0.02083333395421505,
+        "reg_attn": 0.05108179524540901,
+        "content_attn": 0.01801992766559124
+      },
+      {
+        "layer": 6,
+        "bos_attn": 0.02083333395421505,
+        "reg_attn": 0.04717910289764404,
+        "content_attn": 0.018382301554083824
+      },
+      {
+        "layer": 7,
+        "bos_attn": 0.02083333395421505,
+        "reg_attn": 0.045219480991363525,
+        "content_attn": 0.018564319238066673
+      },
+      {
+        "layer": 8,
+        "bos_attn": 0.02083333395421505,
+        "reg_attn": 0.043339937925338745,
+        "content_attn": 0.018739648163318634
+      },
+      {
+        "layer": 9,
+        "bos_attn": 0.02083333395421505,
+        "reg_attn": 0.04205784201622009,
+        "content_attn": 0.018858976662158966
+      },
+      {
+        "layer": 10,
+        "bos_attn": 0.02083333395421505,
+        "reg_attn": 0.042284175753593445,
+        "content_attn": 0.018837781623005867
+      },
+      {
+        "layer": 11,
+        "bos_attn": 0.02083333395421505,
+        "reg_attn": 0.03965184837579727,
+        "content_attn": 0.019082574173808098
+      },
+      {
+        "layer": 12,
+        "bos_attn": 0.02083333395421505,
+        "reg_attn": 0.038842543959617615,
+        "content_attn": 0.01915799267590046
+      },
+      {
+        "layer": 13,
+        "bos_attn": 0.02083333395421505,
+        "reg_attn": 0.03813396394252777,
+        "content_attn": 0.019223617389798164
+      },
+      {
+        "layer": 14,
+        "bos_attn": 0.02083333395421505,
+        "reg_attn": 0.03964944928884506,
+        "content_attn": 0.019082186743617058
+      },
+      {
+        "layer": 15,
+        "bos_attn": 0.02083333395421505,
+        "reg_attn": 0.043197326362133026,
+        "content_attn": 0.018752502277493477
+      },
+      {
+        "layer": 16,
+        "bos_attn": 0.02083333395421505,
+        "reg_attn": 0.05007673427462578,
+        "content_attn": 0.0181124247610569
+      },
+      {
+        "layer": 17,
+        "bos_attn": 0.02083333395421505,
+        "reg_attn": 0.049833253026008606,
+        "content_attn": 0.01813548058271408
+      },
+      {
+        "layer": 18,
+        "bos_attn": 0.02083333395421505,
+        "reg_attn": 0.05731983110308647,
+        "content_attn": 0.01743902452290058
+      },
+      {
+        "layer": 19,
+        "bos_attn": 0.02083333395421505,
+        "reg_attn": 0.055509164929389954,
+        "content_attn": 0.01760798692703247
+      },
+      {
+        "layer": 20,
+        "bos_attn": 0.02083333395421505,
+        "reg_attn": 0.05721821263432503,
+        "content_attn": 0.017448585480451584
+      },
+      {
+        "layer": 21,
+        "bos_attn": 0.02083333395421505,
+        "reg_attn": 0.053762901574373245,
+        "content_attn": 0.017770353704690933
+      },
+      {
+        "layer": 22,
+        "bos_attn": 0.02083333395421505,
+        "reg_attn": 0.05680198594927788,
+        "content_attn": 0.017487311735749245
+      },
+      {
+        "layer": 23,
+        "bos_attn": 0.02083333395421505,
+        "reg_attn": 0.05695093795657158,
+        "content_attn": 0.017473256215453148
+      },
+      {
+        "layer": 24,
+        "bos_attn": 0.02083333395421505,
+        "reg_attn": 0.06381602585315704,
+        "content_attn": 0.016834812238812447
+      },
+      {
+        "layer": 25,
+        "bos_attn": 0.02083333395421505,
+        "reg_attn": 0.06222556158900261,
+        "content_attn": 0.016983024775981903
+      },
+      {
+        "layer": 26,
+        "bos_attn": 0.02083333395421505,
+        "reg_attn": 0.0574689619243145,
+        "content_attn": 0.01742514967918396
+      },
+      {
+        "layer": 27,
+        "bos_attn": 0.02083333395421505,
+        "reg_attn": 0.054807793349027634,
+        "content_attn": 0.017672883346676826
+      },
+      {
+        "layer": 28,
+        "bos_attn": 0.02083333395421505,
+        "reg_attn": 0.056210048496723175,
+        "content_attn": 0.017542673274874687
+      },
+      {
+        "layer": 29,
+        "bos_attn": 0.02083333395421505,
+        "reg_attn": 0.06699405610561371,
+        "content_attn": 0.01653902977705002
+      },
+      {
+        "layer": 30,
+        "bos_attn": 0.02083333395421505,
+        "reg_attn": 0.08189751952886581,
+        "content_attn": 0.015153626911342144
+      },
+      {
+        "layer": 31,
+        "bos_attn": 0.02083333395421505,
+        "reg_attn": 0.09662292152643204,
+        "content_attn": 0.013784070499241352
+      }
+    ]
+  },
+  "cloze_history": [
+    {
+      "step": 200,
+      "cloze_acc": 0.7754212667054038
+    },
+    {
+      "step": 400,
+      "cloze_acc": 0.7649622312608948
+    },
+    {
+      "step": 600,
+      "cloze_acc": 0.7739686228936665
+    },
+    {
+      "step": 800,
+      "cloze_acc": 0.7635095874491574
+    },
+    {
+      "step": 1000,
+      "cloze_acc": 0.7826844857640907
+    },
+    {
+      "step": 1200,
+      "cloze_acc": 0.7806507844276583
+    },
+    {
+      "step": 1400,
+      "cloze_acc": 0.7858803021499129
+    },
+    {
+      "step": 1600,
+      "cloze_acc": 0.779198140615921
+    },
+    {
+      "step": 1800,
+      "cloze_acc": 0.7844276583381755
+    },
+    {
+      "step": 2000,
+      "cloze_acc": 0.7861708309122604
+    },
+    {
+      "step": 2200,
+      "cloze_acc": 0.7914003486345148
+    },
+    {
+      "step": 2400,
+      "cloze_acc": 0.7943056362579896
+    },
+    {
+      "step": 2600,
+      "cloze_acc": 0.7937245787332946
+    },
+    {
+      "step": 2800,
+      "cloze_acc": 0.7954677513073795
+    },
+    {
+      "step": 3000,
+      "cloze_acc": 0.7940151074956421
+    },
+    {
+      "step": 3069,
+      "cloze_acc": 0.7940151074956421
+    }
+  ]
+}
