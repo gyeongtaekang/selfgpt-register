@@ -43,6 +43,11 @@ class Config:
     gradient_checkpointing: bool = True    # saves activation mem → allows large batch
     seed: int = 42
 
+    # ── Adaptive Sink Gate (ASG) ───────────────────────────────────────────
+    num_asg_absorbers: int = 4      # learnable absorber directions per layer
+    asg_z_threshold: float = 2.0   # initial z-score cutoff (learnable during training)
+    asg_max_alpha: float = 0.5     # max fraction of sink component removed (hard cap)
+
     # ── Evaluation ─────────────────────────────────────────────────────────
     num_selfcheck_samples: int = 5    # generation samples per prompt
     num_eval_examples: int = 50       # test examples for SelfCheckGPT
