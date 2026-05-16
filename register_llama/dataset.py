@@ -1,9 +1,11 @@
 """
-Datasets for ROCStories (train) and Story Cloze Test (val/test).
+Datasets for ROCStories (train), Story Cloze Test (val/test),
+and CNN/DailyMail (train + SelfCheckGPT eval).
 """
 
 import os
 import glob
+import random
 import torch
 import pandas as pd
 from torch.utils.data import Dataset
@@ -205,3 +207,91 @@ def evaluate_cloze_accuracy(
 
     acc = correct / total if total > 0 else 0.0
     return acc, total
+
+
+# ── CNN/DailyMail (CLM training) ──────────────────────────────────────────
+
+class CNNDailyMailDataset(Dataset):
+    """
+    CNN/DailyMail articles → causal LM targets.
+    Register tokens inserted after BOS; register positions masked in labels.
+    """
+
+    def __init__(self, split: str, cfg: Config, tokenizer, register_ids: List[int]):
+        from datasets import load_dataset
+
+        self.tokenizer = tokenizer
+        self.register_ids = register_ids
+        self.max_length = cfg.max_length
+        self.pad_id = tokenizer.pad_token_id
+        self.n_prefix = 1 + len(register_ids)
+
+        ds = load_dataset("cnn_dailymail", "3.0.0", split=split)
+        self.articles: List[str] = [item["article"] for item in ds]
+
+        print(f"CNNDailyMailDataset ({split}): {len(self.articles):,} articles loaded")
+
+    def __len__(self):
+        return len(self.articles)
+
+    def __getitem__(self, idx):
+        ids = _tokenize_with_registers(
+            self.articles[idx], self.tokenizer, self.register_ids, self.max_length
+        )
+        seq_len = len(ids)
+        pad_len = self.max_length - seq_len
+
+        labels = [-100] * self.n_prefix + ids[self.n_prefix:] + [-100] * pad_len
+        attention_mask = [1] * seq_len + [0] * pad_len
+        ids = ids + [self.pad_id] * pad_len
+
+        return {
+            "input_ids": torch.tensor(ids, dtype=torch.long),
+            "attention_mask": torch.tensor(attention_mask, dtype=torch.long),
+            "labels": torch.tensor(labels, dtype=torch.long),
+        }
+
+
+class CNNDailyMailEvalDataset(Dataset):
+    """
+    For SelfCheckGPT evaluation on CNN/DailyMail.
+    Uses the first `prompt_tokens` tokens of each article as the generation prompt.
+    """
+
+    def __init__(
+        self,
+        split: str,
+        tokenizer,
+        register_ids: List[int],
+        n_examples: int = 50,
+        prompt_tokens: int = 64,
+        seed: int = 42,
+    ):
+        from datasets import load_dataset
+
+        ds = load_dataset("cnn_dailymail", "3.0.0", split=split)
+        random.seed(seed)
+        indices = random.sample(range(len(ds)), min(n_examples, len(ds)))
+
+        self.tokenizer = tokenizer
+        self.register_ids = register_ids
+        self.items: List[dict] = []
+
+        for idx in indices:
+            article = ds[int(idx)]["article"]
+            raw_tokens = tokenizer.encode(article, add_special_tokens=False)
+            prompt_tok = raw_tokens[:prompt_tokens]
+            prompt_text = tokenizer.decode(prompt_tok, skip_special_tokens=True)
+            self.items.append({
+                "prompt": prompt_text,
+                "full_article": article,
+            })
+
+        print(f"CNNDailyMailEvalDataset ({split}): {len(self.items)} examples "
+              f"(prompt_tokens={prompt_tokens})")
+
+    def __len__(self):
+        return len(self.items)
+
+    def __getitem__(self, idx):
+        return self.items[idx]

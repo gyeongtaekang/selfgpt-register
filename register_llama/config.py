@@ -48,10 +48,17 @@ class Config:
     asg_z_threshold: float = 2.0   # initial z-score cutoff (learnable during training)
     asg_max_alpha: float = 0.5     # max fraction of sink component removed (hard cap)
 
+    # ── CNN/DailyMail experiment ───────────────────────────────────────────
+    cnn_output_dir: str = "/home/gyeongtae/selfcheckgpt/checkpoints_cnn"
+    cnn_max_length: int = 1024
+    cnn_per_device_train_batch_size: int = 2   # 1024 tokens needs small bs
+    cnn_gradient_accumulation_steps: int = 8   # keep effective bs ≈ same
+    cnn_prompt_tokens: int = 64                # tokens used as SelfCheck prompt
+
     # ── Evaluation ─────────────────────────────────────────────────────────
     num_selfcheck_samples: int = 5    # generation samples per prompt
     num_eval_examples: int = 50       # test examples for SelfCheckGPT
-    max_new_tokens: int = 80
+    max_new_tokens: int = 128
     temperature: float = 0.8
     top_p: float = 0.9
 
