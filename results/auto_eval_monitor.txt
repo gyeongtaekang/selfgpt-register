@@ -1,0 +1,32 @@
+[auto_eval] 학습 완료 대기 중...
+[auto_eval] 학습 완료 감지! 평가 시작...
+Added 4 register tokens → vocab size: 128260
+Loading trained model …
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   0%|          | 1/291 [00:00<00:49,  5.81it/s]Loading weights:   4%|▍         | 13/291 [00:00<00:04, 55.90it/s]Loading weights:   8%|▊         | 22/291 [00:00<00:03, 67.85it/s]Loading weights:  11%|█         | 31/291 [00:00<00:03, 72.13it/s]Loading weights:  14%|█▎        | 40/291 [00:00<00:03, 74.12it/s]Loading weights:  17%|█▋        | 49/291 [00:00<00:03, 75.48it/s]Loading weights:  20%|█▉        | 58/291 [00:00<00:03, 75.96it/s]Loading weights:  23%|██▎       | 67/291 [00:00<00:02, 76.55it/s]Loading weights:  26%|██▌       | 76/291 [00:01<00:02, 76.71it/s]Loading weights:  29%|██▉       | 85/291 [00:01<00:02, 77.05it/s]Loading weights:  32%|███▏      | 94/291 [00:01<00:02, 76.94it/s]Loading weights:  35%|███▌      | 103/291 [00:01<00:02, 80.48it/s]Loading weights:  38%|███▊      | 112/291 [00:01<00:02, 79.32it/s]Loading weights:  42%|████▏     | 121/291 [00:01<00:02, 78.57it/s]Loading weights:  45%|████▍     | 130/291 [00:01<00:02, 78.21it/s]Loading weights:  48%|████▊     | 139/291 [00:01<00:01, 77.69it/s]Loading weights:  51%|█████     | 148/291 [00:01<00:01, 77.66it/s]Loading weights:  54%|█████▍    | 157/291 [00:02<00:01, 77.55it/s]Loading weights:  57%|█████▋    | 166/291 [00:02<00:01, 77.64it/s]Loading weights:  60%|██████    | 175/291 [00:02<00:01, 77.72it/s]Loading weights:  63%|██████▎   | 184/291 [00:02<00:01, 78.09it/s]Loading weights:  66%|██████▋   | 193/291 [00:02<00:01, 78.41it/s]Loading weights:  69%|██████▉   | 202/291 [00:02<00:01, 79.11it/s]Loading weights:  73%|███████▎  | 211/291 [00:02<00:00, 81.55it/s]Loading weights:  76%|███████▌  | 220/291 [00:02<00:00, 80.91it/s]Loading weights:  79%|███████▊  | 229/291 [00:03<00:00, 80.58it/s]Loading weights:  82%|████████▏ | 238/291 [00:03<00:00, 80.51it/s]Loading weights:  85%|████████▍ | 247/291 [00:03<00:00, 80.31it/s]Loading weights:  88%|████████▊ | 256/291 [00:03<00:00, 80.52it/s]Loading weights:  91%|█████████ | 265/291 [00:03<00:00, 80.77it/s]Loading weights:  94%|█████████▍| 274/291 [00:03<00:00, 80.42it/s]Loading weights:  97%|█████████▋| 283/291 [00:03<00:00, 80.75it/s]Loading weights: 100%|██████████| 291/291 [00:03<00:00, 77.34it/s]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/gyeongtae/selfcheckgpt/register_llama/evaluate.py", line 549, in <module>
+    main()
+    ~~~~^^
+  File "/home/gyeongtae/selfcheckgpt/register_llama/evaluate.py", line 480, in main
+    model = load_trained_model(args.checkpoint, cfg, tokenizer)
+  File "/home/gyeongtae/selfcheckgpt/register_llama/evaluate.py", line 53, in load_trained_model
+    model = PeftModel.from_pretrained(base, checkpoint_dir)
+  File "/home/gyeongtae/.local/lib/python3.13/site-packages/peft/peft_model.py", line 582, in from_pretrained
+    load_result = model.load_adapter(
+        model_id,
+    ...<5 lines>...
+        **kwargs,
+    )
+  File "/home/gyeongtae/.local/lib/python3.13/site-packages/peft/peft_model.py", line 1402, in load_adapter
+    adapters_weights = load_peft_weights(
+        model_id, device=torch_device, key_mapping=key_mapping, **hf_hub_download_kwargs
+    )
+  File "/home/gyeongtae/.local/lib/python3.13/site-packages/peft/utils/save_and_load.py", line 965, in load_peft_weights
+    adapters_weights = safe_load_file(filename, device=device)
+  File "/home/gyeongtae/.local/lib/python3.13/site-packages/safetensors/torch.py", line 338, in load_file
+    result[k] = f.get_tensor(k)
+                ~~~~~~~~~~~~^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 1004.00 MiB. GPU 0 has a total capacity of 23.55 GiB of which 160.88 MiB is free. Process 178520 has 23.02 GiB memory in use. Including non-PyTorch memory, this process has 366.00 MiB memory in use. Of the allocated memory 160.00 MiB is allocated by PyTorch, and 2.00 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+[auto_eval] 평가 완료! 결과: results/report.md

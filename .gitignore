@@ -6,6 +6,7 @@ dist/
 
 # Large model checkpoints
 checkpoints/
+checkpoints_cnn/
 
 # External cloned repos
 Attention-Viewer/

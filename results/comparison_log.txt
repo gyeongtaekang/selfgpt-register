@@ -1,0 +1,39 @@
+Loading test dataset to fix 50 example indices...
+Added 4 register tokens → vocab size: 128260
+ClozeTestDataset (/home/gyeongtae/selfcheckgpt/test): 3,442 examples, 1871 with labels
+Fixed 50 example indices (seed=42)
+
+============================================================
+  BASELINE: LLaMA 3.1 8B (no register, no fine-tuning)
+============================================================
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   0%|          | 1/291 [00:00<00:44,  6.49it/s]Loading weights:   4%|▍         | 13/291 [00:00<00:04, 58.35it/s]Loading weights:   8%|▊         | 22/291 [00:00<00:03, 70.49it/s]Loading weights:  11%|█         | 32/291 [00:00<00:03, 77.67it/s]Loading weights:  14%|█▍        | 41/291 [00:00<00:03, 78.37it/s]Loading weights:  17%|█▋        | 50/291 [00:00<00:03, 77.54it/s]Loading weights:  20%|██        | 59/291 [00:00<00:02, 77.83it/s]Loading weights:  23%|██▎       | 68/291 [00:00<00:02, 77.96it/s]Loading weights:  27%|██▋       | 78/291 [00:01<00:02, 78.08it/s]Loading weights:  30%|██▉       | 87/291 [00:01<00:02, 77.75it/s]Loading weights:  33%|███▎      | 96/291 [00:01<00:02, 77.17it/s]Loading weights:  36%|███▌      | 105/291 [00:01<00:02, 76.87it/s]Loading weights:  39%|███▉      | 114/291 [00:01<00:02, 76.83it/s]Loading weights:  42%|████▏     | 123/291 [00:01<00:02, 77.00it/s]Loading weights:  45%|████▌     | 132/291 [00:01<00:02, 76.84it/s]Loading weights:  48%|████▊     | 141/291 [00:01<00:01, 76.57it/s]Loading weights:  52%|█████▏    | 150/291 [00:02<00:01, 76.96it/s]Loading weights:  55%|█████▍    | 159/291 [00:02<00:01, 77.33it/s]Loading weights:  58%|█████▊    | 168/291 [00:02<00:01, 77.80it/s]Loading weights:  61%|██████    | 177/291 [00:02<00:01, 78.13it/s]Loading weights:  64%|██████▍   | 186/291 [00:02<00:01, 78.84it/s]Loading weights:  68%|██████▊   | 198/291 [00:02<00:01, 89.03it/s]Loading weights:  71%|███████   | 207/291 [00:02<00:00, 87.10it/s]Loading weights:  74%|███████▍  | 216/291 [00:02<00:00, 85.00it/s]Loading weights:  77%|███████▋  | 225/291 [00:02<00:00, 83.39it/s]Loading weights:  80%|████████  | 234/291 [00:03<00:00, 82.97it/s]Loading weights:  84%|████████▎ | 243/291 [00:03<00:00, 82.21it/s]Loading weights:  87%|████████▋ | 252/291 [00:03<00:00, 81.51it/s]Loading weights:  90%|████████▉ | 261/291 [00:03<00:00, 81.61it/s]Loading weights:  93%|█████████▎| 271/291 [00:03<00:00, 85.42it/s]Loading weights:  96%|█████████▌| 280/291 [00:03<00:00, 86.25it/s]Loading weights:  99%|█████████▉| 289/291 [00:03<00:00, 85.31it/s]Loading weights: 100%|██████████| 291/291 [00:03<00:00, 79.49it/s]
+SelfCheck-BERTScore initialized
+ClozeTestDataset (/home/gyeongtae/selfcheckgpt/test): 3,442 examples, 1871 with labels
+  [1/50] baseline sampling...Loading weights:   0%|          | 0/389 [00:00<?, ?it/s]Loading weights:  95%|█████████▌| 371/389 [00:00<00:00, 3673.13it/s]Loading weights: 100%|██████████| 389/389 [00:00<00:00, 3754.22it/s]
+/home/gyeongtae/.local/lib/python3.13/site-packages/bert_score/score.py:149: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:213.)
+  baselines = torch.from_numpy(
+Loading weights:   0%|          | 0/389 [00:00<?, ?it/s]Loading weights:  96%|█████████▌| 372/389 [00:00<00:00, 3686.66it/s]Loading weights: 100%|██████████| 389/389 [00:00<00:00, 3756.85it/s]
+Loading weights:   0%|          | 0/389 [00:00<?, ?it/s]Loading weights: 100%|██████████| 389/389 [00:00<00:00, 4063.41it/s]
+Loading weights:   0%|          | 0/389 [00:00<?, ?it/s]Loading weights: 100%|██████████| 389/389 [00:00<00:00, 4142.91it/s]
+  [2/50] baseline sampling...Loading weights:   0%|          | 0/389 [00:00<?, ?it/s]Loading weights:  94%|█████████▍| 366/389 [00:00<00:00, 3657.32it/s]Loading weights: 100%|██████████| 389/389 [00:00<00:00, 3717.89it/s]
+Loading weights:   0%|          | 0/389 [00:00<?, ?it/s]Loading weights:  95%|█████████▍| 369/389 [00:00<00:00, 3659.57it/s]Loading weights: 100%|██████████| 389/389 [00:00<00:00, 3726.23it/s]
+Traceback (most recent call last):
+  File "/home/gyeongtae/selfcheckgpt/baseline_eval.py", line 96, in <module>
+    scores = selfcheck.predict(sentences=sents, sampled_passages=samples[1:])
+  File "/home/gyeongtae/.local/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/gyeongtae/selfcheckgpt/selfcheckgpt/modeling_selfcheck.py", line 280, in predict
+    P, R, F1 = bert_score.score(
+               ~~~~~~~~~~~~~~~~^
+            cands, refs,
+            ^^^^^^^^^^^^
+            lang=self.default_model, verbose=False,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            rescale_with_baseline=self.rescale_with_baseline,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/gyeongtae/.local/lib/python3.13/site-packages/bert_score/score.py", line 77, in score
+    if not isinstance(refs[0], str):
+                      ~~~~^^^
+IndexError: list index out of range
